@@ -22,6 +22,7 @@ section {
   height: 100px;
   border-radius: 50%;
   margin-right: 10px;
+  margin-bottom: 25px;
 }
 
 .left-bottom-container {
@@ -102,7 +103,7 @@ li {
 }
 </style>
 
-# ClineでAWS CDKやインフラ構成図作ってみた
+# ClineでAWS CDKや<br/>インフラ構成図作ってみた
 
 <div class="container">
   <img src="../img/ryome512.png" alt="circle-icon" class="circle-img">
@@ -407,9 +408,10 @@ cdk init app --language 【言語】
 
 <div class="normal-slide">
 
-# サンプルコード
+# CDKサンプルコード
 
 GitHubリポジトリ：[aws-cdk-examples](https://github.com/ryomeblog/aws-cdk-examples)
+インフラドキュメント：[インフラストラクチャアーキテクチャ詳細](https://github.com/ryomeblog/cline-cdk-sample/blob/master/cline-cdk-sample3/doc/architecture.md)
 
 </div>
 
