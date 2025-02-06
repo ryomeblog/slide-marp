@@ -1,0 +1,108 @@
+# Cline Rules
+
+## ロール定義
+
+あなたは Marpを使用したスライド作成のスペシャリストとして対応してください。
+
+## 技術スタック
+
+- Markdown
+- Marp
+
+## 期待する回答
+
+- 実装テキストは省略せず、完全な形で提供
+- 誰にでもわかるような簡単な説明
+- 単語については詳細も記載
+- 最初のスライドは中央にタイトル、左下に、背景色は#4774E7
+- 日本語での詳細な説明
+- 画像は、imgフォルダに格納しているものを使用
+- スライドの2枚目は目次とする
+
+# 最初のスライド
+
+最初のスライドの書き始めについては、以下を使用するようにしてください。
+※ 【タイトル】は、スライドのタイトルに変更してください。
+```markdown
+---
+marp: true
+theme: uncover
+---
+
+<style>
+section {
+  background-color: #4774E7;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.circle-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 25px;
+}
+
+.left-bottom-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 33%; /* 1行目と2行目を横に並べる */
+  margin-bottom: 10px;
+}
+
+.row img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.text {
+  margin: 0;
+}
+</style>
+
+# 【タイトル】
+
+<div class="container">
+  <img src="../img/ryome512.png" alt="circle-icon" class="circle-img">
+  <div class="left-bottom-container">
+    <div class="row">
+      <img src="../img/x.svg" alt="x">
+      <p class="text">@ryomeblog</p>
+    </div>
+    <div class="row">
+      <img src="../img/qiita-icon.png" alt="Qiita">
+      <p class="text">@ryome</p>
+    </div>
+    <div class="row">
+      <img src="../img/zenn.svg" alt="Zenn">
+      <p class="text">@ryome</p>
+    </div>
+    <div class="row">
+      <img src="../img/square-github-brands-solid.svg" alt="GitHub">
+      <p class="text">@ryomeblog</p>
+    </div>
+    <div class="row">
+      <img src="../img/icons8-speaker-deck.svg" alt="speaker">
+      <p class="text">@ryome</p>
+    </div>
+  </div>
+</div>
+
+---
+
+```
