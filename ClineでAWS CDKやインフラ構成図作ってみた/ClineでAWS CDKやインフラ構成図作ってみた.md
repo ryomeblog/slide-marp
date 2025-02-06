@@ -22,7 +22,7 @@ section {
   height: 100px;
   border-radius: 50%;
   margin-right: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .left-bottom-container {
@@ -191,7 +191,7 @@ li {
 
 <div class="normal-slide">
 
-# Cline導入方法
+## Cline導入方法
 
 - VSCodeの拡張機能で「clien」と検索
 - Clineをインストール
@@ -208,13 +208,12 @@ Clineを商用利用する際は注意してください。**
 
 <div class="normal-slide">
 
-# Clineって何ができるの？：Architect
+## Clineって何ができるの？：Architect
 
 - アーキテクチャ設計
   - こういうの作りたいんだけどっていうざっくりとしたイメージを形にしてくれる
 - インフラ構成図作成
-  - AWSとかGCPとか言っても通じる
-  - サービス名伝えるだけで構成考えてくれる
+  - AWSやGCPのサービス名を伝えるだけで構成を考えてくれる
   - インフラ構成図はPythonライブラリのDiagramsを使用する可能！
 
 </div>
@@ -223,7 +222,7 @@ Clineを商用利用する際は注意してください。**
 
 <div class="normal-slide">
 
-# Clineって何ができるの？：Architect
+## Clineって何ができるの？：Architect
 
 - リアルタイム音声翻訳アプリ作りたい～
 - ステレオミキサーの音声を翻訳して機械音声で再生して～
@@ -236,11 +235,11 @@ Clineを商用利用する際は注意してください。**
 
 <div class="normal-slide">
 
-# Clineって何ができるの？：Code
+## Clineって何ができるの？：Code
 
 - コード生成と修正
   - タスクを伝えるとコードを実装してくれる
-  - ターミナルとかいじって勝手に依存関係解決してくれる
+  - ターミナルにコマンドを打って勝手に依存関係を解決してくれる
   - こちらは承認を押しているだけ
   - このスライドを作ったのもCline！！
 - エラー自動修正
@@ -252,7 +251,7 @@ Clineを商用利用する際は注意してください。**
 
 <div class="normal-slide">
 
-# Clineって何ができるの？：Code
+## Clineって何ができるの？：Code
 
 ```text:プロンプト
 あなたはこれから簡単なToDoリストサンプルアプリを作成してください。
@@ -268,7 +267,7 @@ Clineを商用利用する際は注意してください。**
 
 <div class="normal-slide">
 
-# Clineって何ができるの？：Code
+## Clineって何ができるの？：Code
 
 <img src="./img/002.png" width="55%" />
 
@@ -276,13 +275,12 @@ Clineを商用利用する際は注意してください。**
 
 <div class="normal-slide">
 
-# Clineって何ができるの？：Ask
+## Clineって何ができるの？：Ask
 
 - プロジェクト関連の質問対応
-  - どこに何のファイルがある？
+  - どこに何のファイルがある？環境変数は何がいる？
   - 実行コマンドはどうすれば良いの？
-  - 環境変数は何がいる？
-  - なんでこの仕様にしたか？とか文面で残していれば教えてくれる
+  - なんでこの仕様にしたか？などを文面で残していれば教えてくれる
 - コードの説明
   - ～ファイルの～関数は何してるの？
 
@@ -441,11 +439,7 @@ cdk deploy
 - CodeCommitのクローンURLをコピー
 - `git clone 【URL】` コマンド実施（IAMユーザのCodeCommitのHTTPS Git 認証情報が必要）
 - `cd react-app-repository` でディレクトリを移動
-- todolistディレクトリ配下をコピー
-
-```
-cp -r ../todolist .
-```
+- todolistディレクトリ配下を `cp -r ../todolist .` でコピー
 
 </div>
 
@@ -471,7 +465,7 @@ git push -u origin main
 
 # デプロイまでの手順4
 
-- パイプラインがデプロイしているところまでマネージメントコンソールで確認する
+- マネージメントコンソールでパイプラインが通っていることを確認する
 
 <img src="./img/003.png" width="55%" />
 
@@ -483,9 +477,9 @@ git push -u origin main
 
 # デプロイまでの手順5
 
-- CloudFrontのディストリビューションドメイン名にアクセスして画面が見れたら成功
+- CloudFrontのディストリビューションドメイン名にアクセスして画面が見れたら成功！
 
-<img src="./img/002.png" width="50%" />
+<img src="./img/002.png" width="45%" />
 
 </div>
 
@@ -493,7 +487,18 @@ git push -u origin main
 
 <div class="normal-slide">
 
-# 便利な使い方①
+# Clineの便利な使い方
+
+- ESLint/Prettier等の設定
+- テストコード生成
+- ドキュメント生成
+- ルールファイル定義
+
+</div>
+
+---
+
+<div class="normal-slide">
 
 ## ESLint/Prettier等の設定
 - 何かの手順を記事にまとめておいて、リンクかテキストを渡して指示するだけ
@@ -507,7 +512,7 @@ git push -u origin main
 
 <div class="normal-slide">
 
-# 便利な使い方②：テストコード生成
+## テストコード生成
 
 - JestやPlaywrightテストコード生成に便利！！
 - たたき台程度ならすぐに作ってくれる
@@ -520,7 +525,7 @@ git push -u origin main
 
 <div class="normal-slide">
 
-# 便利な使い方③：ドキュメント生成
+## ドキュメント生成
 
 - ブログ記事のアイデアが浮かんで、やりたいこと話したら**コードも記事もできている**
 - テストケースの洗い出しとかライセンスチェックとかClineに頼んでフォーマットしてもらえる
@@ -532,7 +537,7 @@ git push -u origin main
 
 <div class="normal-slide">
 
-# 便利な使い方④：ルールファイル
+## ルールファイル定義
 
 - `.clinerules` を活用することでコーディング規約やプロジェクトのルール（コミットルールなど）に従った開発を行ってくれる
 
@@ -545,5 +550,18 @@ git push -u origin main
 - Marp
 ...etc
 ```
+
+</div>
+
+---
+
+<div class="normal-slide">
+
+## まとめ
+
+- Clineは、VSCodeの拡張機能でAIエージェントのこと
+- ReactやAWS CDK等のコード生成、インフラ構成図の作成などを自律的に行うことができる
+- エラーなども自己解決し、成果物の品質を担保する
+- Clineを活用することで、開発者はコーディング等の下流行程の作業から解放され、より上流工程の作業に集中できるようになる
 
 </div>
